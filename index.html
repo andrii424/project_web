@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+
+    <form method="POST" action="/">
+        {{ product_form.hidden_tag() }}
+        {{ product_form.csrf_token }}
+        <div>
+            {{ product_form.sku.label }} {{ product_form.sku }}
+        </div>
+        <div>
+            {{ product_form.description.label }} {{ product_form.description }}
+        </div>
+        <div>
+            {{ product_form.sales_price.label }} {{ product_form.sales_price }}
+        </div>
+        <div>
+            {{ product_form.purchase_price.label }} {{ product_form.purchase_price }}
+        </div>
+        <div>
+            {{ product_form.submit() }}
+        </div>
+    </form>
+
+    <h1>Add Client</h1>
+
+    <form method="POST" action="/">
+        {{ client_form.hidden_tag() }}
+        {{ client_form.csrf_token }}
+        <div>
+            {{ client_form.name.label }} {{ client_form.name }}
+        </div>
+        <div>
+            {{ client_form.email.label }} {{ client_form.email }}
+        </div>
+        <div>
+            {{ client_form.shipping_address.label }} {{ client_form.shipping_address }}
+        </div>
+        <div>
+            {{ client_form.phone.label }} {{ client_form.phone }}
+        </div>
+        <div>
+            {{ client_form.submit() }}
+        </div>
+    </form>
+
+    <h1>Add Location</h1>
+
+    <form method="POST" action="/">
+        {{ location_form.hidden_tag() }}
+        {{ location_form.csrf_token }}
+        <div>
+            {{ location_form.abbreviation.label }} {{ location_form.abbreviation }}
+        </div>
+        <div>
+            {{ location_form.name.label }} {{ location_form.name }}
+        </div>
+        <div>
+            {{ location_form.address.label }} {{ location_form.address }}
+        </div>
+        <div>
+            {{ location_form.submit() }}
+        </div>
+    </form>
+</body>
+</html>
